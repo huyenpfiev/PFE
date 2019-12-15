@@ -1,0 +1,45 @@
+&nbsp;
+<nav class="navbar bg-secondary navbar-dark">
+    <span class="navbar-brand">{{nom}}</span>
+</nav>
+<div class="bg-light">
+    &nbsp;
+    <header>
+        <h4>Information personnelle</h4>
+    </header>
+    <hr>
+    <div>
+        <ul *ngFor="let i of info">
+            <li>
+                <span>{{i}}</span> 
+            </li>
+                
+        </ul>
+    </div> 
+    &nbsp;
+    <header>
+        <h4>Articles[{{articles.length}}]</h4>
+    </header>
+    <hr>
+    <div>
+        <ul *ngFor="let i of articles">
+            <li>
+                <span>{{i}}</span> 
+            </li>
+                
+        </ul>
+    </div> 
+    &nbsp;
+    <header>
+        <h4>Co-auteurs[{{coauteurs.length}}]</h4>
+    </header>
+    <hr>
+    <div>
+        <ul *ngFor="let i of coauteurs">
+            <li>
+                <span>{{i}}</span> 
+            </li>
+                
+        </ul>
+    </div> 
+</div>

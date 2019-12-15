@@ -1,0 +1,37 @@
+<h2>CONNEXION</h2>
+<div class="card">
+    <div class="card-body">
+
+      <form [formGroup]="angForm" (ngSubmit)="onSubmit()" novalidate>
+          <div *ngIf="invalid" class="alert alert-danger">
+              Nom d'utilisateur ou Mot de passe incorrect!
+          </div>
+        <div class="form-group">
+                <label class="col-md-4">Nom d'utilisateur</label>
+                <input type="text" class="form-control" formControlName="Username" 
+                #Username />
+              </div>
+              <div *ngIf="angForm.controls['Username'].invalid && (angForm.controls['Username'].dirty || angForm.controls['Username'].touched)" class="alert alert-danger">
+                    <div *ngIf="angForm.controls['Username'].errors.required">
+                      Nom d'utilisateur est requis.
+                    </div>
+                  
+        </div>
+        <div class="form-group">
+                <label class="col-md-4">Mot de passe</label>
+                <input type="password" class="form-control" formControlName="Password" 
+                #Password />
+              </div>
+              <div *ngIf="angForm.controls['Password'].invalid && (angForm.controls['Password'].dirty || angForm.controls['Password'].touched)" class="alert alert-danger">
+                    <div *ngIf="angForm.controls['Password'].errors.required">
+                      Mot de passe est requis.
+                    </div>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary" 
+          [disabled]="angForm.pristine || angForm.invalid" >Se connecter</button>
+        </div>
+      </form>
+    </div>
+  </div>
+

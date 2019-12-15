@@ -1,0 +1,79 @@
+<h2>INSCRIPTION</h2>
+<div class="card">
+    <div class="card-body">
+
+      <form [formGroup]="angForm" (ngSubmit)="onSubmit()" novalidate>
+          <div *ngIf="err" class="alert alert-danger">
+              Pas de resultats pour vous!
+          </div>
+        <div class="form-group">
+          <label class="col-md-4">Prénom</label>
+          <input type="text" class="form-control" 
+          formControlName="FirstName" 
+          #FirstName />
+        </div>
+        <div *ngIf="angForm.controls['FirstName'].invalid && (angForm.controls['FirstName'].dirty || angForm.controls['FirstName'].touched)" class="alert alert-danger">
+                <div *ngIf="angForm.controls['FirstName'].errors.required">
+                  Prénom est requis.
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-4">Nom</label>
+            <input type="text" class="form-control" formControlName="LastName" 
+            #LastName />
+          </div>
+          <div *ngIf="angForm.controls['LastName'].invalid && (angForm.controls['LastName'].dirty || angForm.controls['LastName'].touched)" class="alert alert-danger">
+                <div *ngIf="angForm.controls['LastName'].errors.required">
+                  Nom est requis.
+                </div>
+        </div>
+        
+        <div class="form-group">
+          <button type="submit" class="btn btn-success" 
+          [disabled]="angForm.pristine || angForm.invalid" >Rechercher</button>
+        </div>
+      </form>
+    <!-- ======================================================================== -->
+      <form [formGroup]="angForm2" (ngSubmit)="onSubmit2()" *ngIf="found" novalidate>
+        <div class="form-group">
+            <label class="col-md-4">Vous êtes:</label>
+            <div  *ngFor="let item of structure;let i = index">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input"  type="radio" value="{{i}}" name="source" formControlName="source" #source>
+                <label class="form-check-label" for="{{i}}" style="white-space:pre-wrap;">{{item}}</label>
+             </div>
+             <hr>
+        </div>
+      
+        </div>
+        <div class="form-group" >
+          <label class="col-md-4">Nom d'utilisateur</label>
+          <input type="text" class="form-control" formControlName="Username" 
+          #Username />
+        </div>
+        <div *ngIf="angForm2.controls['Username'].invalid && (angForm2.controls['Username'].dirty || angForm2.controls['Username'].touched)" class="alert alert-danger">
+              <div *ngIf="angForm2.controls['Username'].errors.required">
+                Nom d'utilisateur est requis.
+              </div>    
+        </div>
+        <div *ngIf="existed" class="alert alert-danger">                  
+              Ce nom d'utilisateur existe déjà!                 
+        </div>
+        
+        <div class="form-group" >
+                <label class="col-md-4">Mot de passe</label>
+                <input type="password" class="form-control" formControlName="Password" 
+                #Password />
+              </div>
+              <div *ngIf="angForm2.controls['Password'].invalid && (angForm2.controls['Password'].dirty || angForm2.controls['Password'].touched)" class="alert alert-danger">
+                    <div *ngIf="angForm2.controls['Password'].errors.required">
+                      Mot de passe est requis.
+                    </div>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary" 
+          [disabled]="angForm2.pristine || angForm2.invalid" >S'inscrire</button>
+        </div>
+      </form>
+    </div>
+  </div>
