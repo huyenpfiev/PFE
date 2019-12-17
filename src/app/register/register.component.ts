@@ -14,6 +14,7 @@ export class RegisterComponent implements OnInit {
   angForm2:FormGroup;
   found:boolean;
   err:boolean;
+  existed:boolean;
   structure:any=[];
  
   constructor(private fb: FormBuilder,private auth: AuthenticationService,private route: ActivatedRoute, private router: Router) { 
@@ -21,6 +22,7 @@ export class RegisterComponent implements OnInit {
     this.createForm2();
     this.err=false;
     this.found=false;
+    this.existed=false;
   }
   createForm(){
     this.angForm = this.fb.group({
@@ -69,8 +71,10 @@ export class RegisterComponent implements OnInit {
 
     this.auth.saveAcc(FirstName,LastName,Username,Password,source).subscribe(
       res => {
-        if(res['result']=='OK')
+        if(res['result']==1)
           this.router.navigate(['login']);
+        else
+          this.existed=true;
       }
       
     );

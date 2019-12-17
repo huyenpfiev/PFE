@@ -262,3 +262,26 @@ JavaScript warning: https://smartcampus.wifirst.net/assets/application-4af8eb7ef
 JavaScript warning: https://smartcampus.wifirst.net/assets/application-4af8eb7ef5ce1c551937b768a2fdca59.js, line 27: Error: WebGL warning: <SetDimensions>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
 JavaScript warning: https://smartcampus.wifirst.net/assets/application-4af8eb7ef5ce1c551937b768a2fdca59.js, line 27: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
 * Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1576568659336	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileV6cT7B"
+*** You are running in headless mode.
+1576568660320	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1576568660321	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1576568660321	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1576568660321	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1576568663830	Marionette	INFO	Listening on port 34777
+1576568663881	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://captiveportal-login.univ-amu.fr/upload/custom/AMU-PC/amu.index.html?cmd=login&mac=4c:bb:58:14:5d:58&ip=172.30.129.233&essid=%28Aix%2AMarseille%20universite&apname=AP_26.1.2&apgroup=Mrs-Luminy&url=https%3A%2F%2Fdblp%2Euni%2Dtrier%2Ede%2Fsearch%3Fq%3Dnicolas%2520durand, line 15: ReferenceError: resultatProbleme is not defined
+JavaScript error: https://captiveportal-login.univ-amu.fr/upload/custom/AMU-PC/amu.index.html?cmd=login&mac=4c:bb:58:14:5d:58&ip=172.30.129.233&essid=%28Aix%2AMarseille%20universite&apname=AP_26.1.2&apgroup=Mrs-Luminy&url=https%3A%2F%2Fdblp%2Euni%2Dtrier%2Ede%2Fsearch%3Fq%3Dnicolas%2520durand, line 25: ReferenceError: resultatTest is not defined
+JavaScript error: https://captiveportal-login.univ-amu.fr/upload/custom/AMU-PC/amu.index.html?cmd=login&mac=4c:bb:58:14:5d:58&ip=172.30.129.233&essid=%28Aix%2AMarseille%20universite&apname=AP_26.1.2&apgroup=Mrs-Luminy&url=https%3A%2F%2Fdblp%2Euni%2Dtrier%2Ede%2F, line 15: ReferenceError: resultatProbleme is not defined
+JavaScript error: https://captiveportal-login.univ-amu.fr/upload/custom/AMU-PC/amu.index.html?cmd=login&mac=4c:bb:58:14:5d:58&ip=172.30.129.233&essid=%28Aix%2AMarseille%20universite&apname=AP_26.1.2&apgroup=Mrs-Luminy&url=https%3A%2F%2Fdblp%2Euni%2Dtrier%2Ede%2F, line 25: ReferenceError: resultatTest is not defined
+1576568693754	Marionette	INFO	Stopped listening on port 34777
+1576570821676	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilegYGEuq"
+*** You are running in headless mode.
+1576570822901	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1576570822902	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1576570822902	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1576570822902	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1576570826280	Marionette	INFO	Listening on port 46322
+1576570826322	Marionette	WARN	TLS certificate errors will be ignored for this session
+1576571173541	Marionette	INFO	Stopped listening on port 46322
+JavaScript error: , line 0: AbortError: A request was aborted, for example through a call to IDBTransaction.abort.

@@ -7,9 +7,6 @@ class Repository(object):
     def login(self, selector):
         return self.client.login(selector)
         
-    def findUsername(self,selector):
-        return self.db.users.findUsername(selector)
-
     def register(self,selector):
         return self.client.register(selector)
     def saveAcc(self,selector):

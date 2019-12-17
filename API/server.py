@@ -38,9 +38,9 @@ def register():
 @app.route("/saveAcc",methods=["POST"])
 def saveAcc():
      req=UserSchema().load(json.loads(request.data))
-     res=Service().saveAcc(req)
-     return jsonify({'result':'OK'})
-
+     res=Service().saveAcc(req)    
+     return jsonify({'result':res})
+    
 @app.route("/getPubs",methods=["POST"])
 def getPubs():
      req=UserSchema().load(json.loads(request.data))

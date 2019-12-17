@@ -10,10 +10,6 @@ class Service(object):
         us = self.client.login(user)
         return [self.dump(u) for u in us]
 
-    def findUsername(self,username):
-        us = self.client.findUsername(username)
-        return [self.dump(u) for u in us]
-
     def register(self,user):
         return self.client.register(user)
 

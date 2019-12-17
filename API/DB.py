@@ -25,8 +25,6 @@ class MongoRepository(object):
   def login(self, user):
     return self.db.users.find(user[0])
   
-  def findUsername(self,username):
-    return self.db.users.find(username[0])
 
   def register(self,user):
     prenom=user[0]['FirstName']
@@ -49,7 +47,16 @@ class MongoRepository(object):
       return items  
 
   def saveAcc(self,user):
-    return self.db.users.insert_one(user[0])    
+    us= self.db.users.find({'Username':user[0]['Username']})
+    i=0
+    for u in us:
+      i=i+1
+    
+    if i>0:
+      return 0
+    else:
+      self.db.users.insert_one(user[0])    
+      return 1
 
   def getPubs(self,user):
     choix =user[0]['source']
