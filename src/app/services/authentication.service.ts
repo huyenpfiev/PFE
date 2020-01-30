@@ -97,9 +97,7 @@ export class AuthenticationService {
   }
   public getPubs(){
     const obj={
-      source:this.user['source'],
-      FirstName:this.user['FirstName'],
-      LastName:this.user['LastName']
+      Username:this.getToken()
     }
     return this.http.post(`${this.uri}/getPubs`,obj);
   }

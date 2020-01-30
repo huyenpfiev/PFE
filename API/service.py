@@ -1,6 +1,6 @@
 from init import Repository
 from DB import MongoRepository
-from schema import UserSchema
+from schema import UserSchema,ArticleSchema,CoauthorSchema
 
 class Service(object):
     def __init__(self,client=Repository(adapter=MongoRepository)):
@@ -17,7 +17,8 @@ class Service(object):
         return self.client.saveAcc(user)
 
     def getPubs(self,user):
-        return self.client.getPubs(user)
+        userArray= self.client.getPubs(user)
+        return [self.dump(u) for u in userArray]
         
     def dump(self, data):
         return UserSchema().dump(data).data

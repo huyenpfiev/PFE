@@ -17,10 +17,11 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.auth.getPubs().subscribe(
       res=>{
-        this.info=res['infos'][0].split(/\r\n|\r|\n/);
+        this.info=res['infos'][0].profile.split(/\r\n|\r|\n/);
         this.nom=this.info[0];
-        this.articles=res['infos'][1];
-        this.coauteurs=res['infos'][2];
+        this.articles=res['infos'][0].articles;
+        this.coauteurs=res['infos'][0].coauthors;
+        
       }
     )
   }

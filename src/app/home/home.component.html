@@ -24,7 +24,7 @@
     <div>
         <ul *ngFor="let i of articles">
             <li>
-                <span>{{i}}</span> 
+                <span>{{i.text}}</span> 
             </li>
                 
         </ul>
@@ -37,7 +37,7 @@
     <div>
         <ul *ngFor="let i of coauteurs">
             <li>
-                <span>{{i}}</span> 
+                <span>{{i.name}}({{i.commonArticle}})</span> 
             </li>
                 
         </ul>
