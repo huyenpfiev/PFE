@@ -1,27 +1,62 @@
 # PFE
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.19.
+This application allows to show your articles and co-authors once successful login. 
 
-## Development server
+The backend is developed with [Python](http://python.org/) version 2.7.12, the frontend with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.19.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Prerequisites
 
-## Code scaffolding
+Both the CLI and generated project have dependencies that require Node 8.9 or higher, together with NPM 5.5.1 or higher.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- [nodeJS](http://nodejs.org/) 13.1.0
+- [MongoDB](https://www.mongodb.com/) 2.6
 
-## Build
+### Installing
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Install Angular-CLI:
 
-## Running unit tests
+```shell
+npm install -g @angular/cli
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+To build this project, simply clone this repository:
 
-## Running end-to-end tests
+```shell
+git clone https://github.com/huyenpfiev/PFE
+```
+Install Driver:
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Extract and copy `geckodriver` file to /usr/local/bin folder in your PC.
 
-## Further help
+### Running
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+You can run the servers independently, but you need them all to use the app completely:
+
+Run a frontend dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+```shell
+cd PFE
+```
+```shell
+ng serve -o
+```
+
+Run a backend server:
+```shell
+cd PFE/API
+```
+```shell
+python server.py
+```
+Do not forget to launch the MongoDB server :
+```shell
+mongod
+```
+
+## Author
+
+- **Thi Thanh Huyen DINH** 
+- **Soukaina El Majdoubi** 
+
+
+
+

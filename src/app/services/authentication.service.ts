@@ -41,21 +41,9 @@ export class AuthenticationService {
     return this.token;
   }
 
-  //public getUserDetails(): UserDetails {
-    // const token = this.getToken();
-    // let payload;
-    // if (token) {
-    //   payload = token.split('.')[1];
-    //   payload = window.atob(payload);
-    //   return JSON.parse(payload);
-    // } else {
-    //   return null;
-    // }
-    //return JSON.parse(this.user);
-  //}
-
+ 
   public isLoggedIn(): boolean {
-    //const user = this.getUserDetails();
+    
     if (this.token != '') {
       return true;
     } else {

@@ -8,7 +8,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
 
-#client = MongoClient('mongodb+srv://DinhHuyen:Huyendien13-08@cluster0-mlysy.mongodb.net/')
+
 client=MongoClient("mongodb://localhost:27017/")
 
 # Options headless driver

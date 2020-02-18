@@ -4,10 +4,9 @@ from flask_restful import Resource, Api
 from json import dumps
 from flask_jsonpify import jsonify
 
-#from DB import MongoRepository as db
 from service import Service 
 from schema import UserSchema
-#from jwt import login_required
+
 
 app = Flask(__name__)
 api = Api(app)
