@@ -34,7 +34,7 @@ You can run the servers independently, but you need them all to use the app comp
 
 Run a frontend dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 ```shell
-cd PFE
+cd PFE-master
 ```
 ```shell
 ng serve -o
@@ -42,7 +42,7 @@ ng serve -o
 
 Run a backend server:
 ```shell
-cd PFE/API
+cd PFE-master/API
 ```
 ```shell
 python server.py
