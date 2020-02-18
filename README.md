@@ -52,10 +52,7 @@ Do not forget to launch the MongoDB server :
 mongod
 ```
 
-## Author
 
-- **Thi Thanh Huyen DINH** 
-- **Soukaina El Majdoubi** 
 
 
 
